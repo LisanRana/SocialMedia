@@ -1,0 +1,11 @@
+Hello, Namaste!!!!
+
+1.Install modemon =npm install -g nodemon
+
+collection banako mongoose ma
+create src , model,controller,routes,middleware,config
+create usermodel.usercontroller,userroutes.
+postman ma gayara data entry.assignment profile ma data create garne.
+
+2081-04-25-git bata liyako user model rw user controller
+         -register and login gareko postman 
