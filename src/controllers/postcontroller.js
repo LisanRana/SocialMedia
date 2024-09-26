@@ -43,6 +43,23 @@ const updatePost = async (req, res) => {
     return res.status(500).json({ msg: err.message });
   }
 };
+// get all post
+const getPost = async (req, res) => {
+ try {
+
+   // Find the post by ID and check if the post belongs to the user
+   const post = await PostModel.find({}).populate('category');
+
+   if (!post) {
+     return res.status(404).json({ msg: "Post not found or unauthorized" });
+   }
+
+   return res.status(200).json({ msg: "Post fetched successfully",post });
+ } catch(err) {
+   return res.status(500).json({ msg: err.message });
+ }
+};
+
 // delete post
 const deletePost = async (req, res) => {
   try {
@@ -64,4 +81,4 @@ const deletePost = async (req, res) => {
   }
 };
 
-module.exports = { createPost, updatePost, deletePost };
+module.exports = { createPost, updatePost, getPost, deletePost };
