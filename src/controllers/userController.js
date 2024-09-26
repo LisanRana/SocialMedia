@@ -1,7 +1,7 @@
 // controller for user registration
 
 const User = require("../models/userModel");
-const Profile=require("../models/userProfilemodel");
+const Profile=require("../models/profileModel");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const dotenv = require("dotenv");

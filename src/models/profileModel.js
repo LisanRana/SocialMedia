@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const profileSchema = new mongoose.Schema({
+const UserProfile = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
@@ -15,8 +15,12 @@ const profileSchema = new mongoose.Schema({
   age: {
     type: Number,
   },
+  profilepic:{
+    type: String,
+    required:false, 
+  }
 });
 
 
-const Profile = mongoose.model("Profile", profileSchema);
+const Profile = mongoose.model("Profile", UserProfile);
 module.exports = Profile;
